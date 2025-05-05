@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import requests
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from helpers.scrapers import movie_details_scraper,scrape_reviews
+from src.helpers.scrapers import movie_details_scraper,scrape_reviews
 from src.helpers.letterboxd_analyzers import LetterboxdReviewAnalyzer
 from src.helpers.roast_generator import LetterboxdRoastAnalyzer
 from src.helpers.scrapers_roast import scrape_user_reviews,scrape_user_stats
