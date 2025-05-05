@@ -22,4 +22,4 @@ ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "letterboxd"]
 
 # Command to run the application
 #CMD ["python", "src/app.py"]
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "src.app:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5515", "src.app:app"]
