@@ -27,7 +27,7 @@ def fetch_html_content(url, headers):
     )
 
 
-def scrape_reviews(film_url, n=30):
+def scrape_reviews(film_url, n=10):
     """Scrapes reviews from a Letterboxd movie page."""
     if not validate_letterboxd_film_url(film_url):
         raise ValueError(f"Invalid URL: {film_url}")
