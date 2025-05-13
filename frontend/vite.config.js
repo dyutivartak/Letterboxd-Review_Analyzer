@@ -14,7 +14,6 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0', // Necessary for Docker
-    allowedHosts: true,
     port: 5173,
     proxy: {
       // Proxy API requests to the backend container
