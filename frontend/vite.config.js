@@ -19,7 +19,7 @@ export default defineConfig({
     proxy: {
       // Proxy API requests to the backend container
       '/api': {
-        target: 'http://backend:5515', // Use the service name for Docker communication
+        target: 'https://letterboxd-review-analyzer-pq3a.onrender.com', // Use the service name for Docker communication
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
