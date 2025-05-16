@@ -15,10 +15,10 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Necessary for Docker
     port: 5173,
+    allowedHosts:True,
     proxy: {
       // Proxy API requests to the backend container
       '/api': {
-        allowedHosts:True,
         target: 'https://letterboxd-review-analyzer-pq3a.onrender.com', // Use the service name for Docker communication
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
